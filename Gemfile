@@ -21,6 +21,8 @@ gem 'toastr-rails'
 gem 'omniauth'
 gem 'omniauth-facebook'
 
+gem 'paperclip'
+
 group :development, :test do
   gem 'byebug'
 end
