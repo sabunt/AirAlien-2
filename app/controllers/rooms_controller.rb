@@ -14,6 +14,7 @@ class RoomsController < ApplicationController
     @room = current_user.rooms.build
   end
 
+  #understand below
   def create
     @room = current_user.rooms.build(room_params)
 
@@ -65,3 +66,4 @@ class RoomsController < ApplicationController
       
     end
 end
+
