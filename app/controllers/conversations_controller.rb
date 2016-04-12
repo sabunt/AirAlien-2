@@ -1,8 +1,8 @@
-class ConversationsController <ApplicationController
+class ConversationsController < ApplicationController
 	before_action :authenticate_user!
 
 	def index
-		@user = User.all
+		@users = User.all
 		@conversations = Conversation.involving(current_user)
 	end
 
@@ -22,3 +22,4 @@ class ConversationsController <ApplicationController
 		end
 
 end
+

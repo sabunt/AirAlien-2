@@ -1,4 +1,4 @@
-class Messages <ApplicationController
+class MessagesController <ApplicationController
 	before_action :authenticate_user!
 	before_action :set_conversation
 
@@ -16,7 +16,9 @@ class Messages <ApplicationController
 		@messages = @conversation.messages.order("created_at DESC")
 
 		if @message.save
-			redirect_to conversation_messages_path(@conversations)
+			respond_to do |format|
+				format.js
+			end
 		end	
 	end
 
